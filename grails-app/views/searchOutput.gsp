@@ -19,29 +19,31 @@
 <body>
 
 <section style="margin-top: 100px">
-    <div class="card text-center w-auto">
-        <h3 class="card-header">Weather+</h3>
-        <div class="card-body">
-            <g:if test="${attribute}">
-                <h2><b>${attribute['name']}</b></h2><br>
-                <g:if test="${unit == '°C'}">
-                    <h3>${(Integer) Math.ceil( (Double) attribute['main']['temp'])} °C</h3><br>
+    <div style="width: 500px">
+        <div class="card" style="width: 200px"></div>
+        <div class="card text-center w-auto" style="width: 100px; align-content: center">
+            <h3 class="card-header">Weather+</h3>
+            <div class="card-body">
+                <g:if test="${attribute}">
+                    <h2><b>${attribute['name']}</b></h2><br>
+                    <g:if test="${unit == '°C'}">
+                        <h3>${(Integer) Math.ceil( (Double) attribute['main']['temp'])} °C</h3><br>
+                    </g:if>
+
+                    <g:if test="${unit == '°F'}">
+                        <h3>${(Integer) Math.ceil( (Double) attribute['main']['temp'])} °F</h3><br>
+                    </g:if>
+
+                    <g:if test="${unit == 'K'}">
+                        <h3>${(Integer) Math.ceil( (Double) attribute['main']['temp'])} K</h3><br>
+                    </g:if>
+                %{--                <h3>${(Integer) Math.ceil( (Double) attribute['main']['temp'])} °C</h3><br>--}%
+                    <img src="http://openweathermap.org/img/w/${attribute['weather']['icon'].join('')}.png"/><br>
+                    <h4>${attribute['weather']['description'].join('')}</h4>
                 </g:if>
-
-                <g:if test="${unit == '°F'}">
-                    <h3>${(Integer) Math.ceil( (Double) attribute['main']['temp'])} °F</h3><br>
-                </g:if>
-
-                <g:if test="${unit == 'K'}">
-                    <h3>${(Integer) Math.ceil( (Double) attribute['main']['temp'])} K</h3><br>
-                </g:if>
-%{--                <h3>${(Integer) Math.ceil( (Double) attribute['main']['temp'])} °C</h3><br>--}%
-                <img src="http://openweathermap.org/img/w/${attribute['weather']['icon'].join('')}.png"/><br>
-                <h4>${attribute['weather']['description'].join('')}</h4>
-            </g:if>
-
-
+            </div>
         </div>
+        <div class="card" style="width: 200px"></div>
     </div>
 </section>
 

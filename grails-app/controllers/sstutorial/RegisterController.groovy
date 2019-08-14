@@ -35,7 +35,7 @@ class RegisterController {
 
         if(password == passwordAgain){
             def role = new Role(authority: 'ROLE_USER').save()
-            def user = new User(username: name + lastname, password: password)
+            def user = new User(username: email, password: password).save()
 
             UserRole.create(user, role)
         } else {

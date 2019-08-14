@@ -31,24 +31,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/"><g:message default="About Us" code="message.home"/></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Documentation</a>
+                <a class="nav-link" href="#"><g:message default="About Us" code="message.documentations"/></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Careers</a>
+                <a class="nav-link" href="#"><g:message default="About Us" code="message.careers"/></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#"><g:message default="About Us" code="message.contact"/></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="#"><g:message default="About Us" code="message.aboutus"/></a>
             </li>
         </ul>
-%{--        <g:form controller="SignIn" action="Login" class="form-inline my-2 my-lg-0 ml-auto py-0">--}%
-%{--            <g:actionSubmit value="Sign In" action="Login" class="nav-link btn btn-outline-primary my-2 my-sm-0"/>--}%
-%{--        </g:form>--}%
     </div>
 </nav>
 <g:layoutBody/>

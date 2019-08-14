@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <meta name="layout" content="_weatherappminussignin"/>
+    <meta name="layout" content="_weatherapp"/>
     <title></title>
     <s2ui:title messageCode='spring.security.ui.login.title'/>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>

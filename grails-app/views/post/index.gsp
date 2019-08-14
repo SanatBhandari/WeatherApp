@@ -21,41 +21,48 @@
 </head>
 
 <body>
-<section style="margin-top: 100px">
-    <s2ui:form type="login" focus="username" style="align-content: center">
-        <div class="card">
-            <div class="card-header">
-                Sign In
+
+<sec:ifNotLoggedIn>
+    <section style="margin-top: 100px">
+        <s2ui:form type="login" focus="username" style="align-content: center">
+            <div class="card">
+                <div class="card-header">
+                    Sign In
+                </div>
+                <div class="card-body">
+                    <div class=form-group">
+                        <label for="username"><g:message code='spring.security.ui.login.username'/></label><br>
+                        <input type="text" name="${securityConfig.apf.usernameParameter}" id="username" class="form-control" required/><br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password"><g:message code='spring.security.ui.login.password'/></label><br>
+                        <input type="password" name="${securityConfig.apf.passwordParameter}" id="password" class='form-control'/><br>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="checkbox" class="checkbox" name="${securityConfig.rememberMe.parameter}" id="remember_me" checked="checked" class="form-control" required/>
+                        <label for='remember_me'><g:message code='spring.security.ui.login.rememberme'/></label> |
+                        <span class="forgot-link">
+                            <g:link controller='register' action='forgotPassword'><g:message code='spring.security.ui.login.forgotPassword'/></g:link>
+                        </span><br>
+                    </div>
+
+                    <div class="form-group">
+                        <g:submitButton name="Log In" class="btn btn-primary btn-default"/>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <div class=form-group">
-                    <label for="username"><g:message code='spring.security.ui.login.username'/></label><br>
-                    <input type="text" name="${securityConfig.apf.usernameParameter}" id="username" class="form-control" required/><br>
-                </div>
+        </s2ui:form>
 
-                <div class="form-group">
-                    <label for="password"><g:message code='spring.security.ui.login.password'/></label><br>
-                    <input type="password" name="${securityConfig.apf.passwordParameter}" id="password" class='form-control'/><br>
-                </div>
+        <g:link controller="register" action="registerNewUser" style="margin-left: 10px">Not a member? Register Here!</g:link>
+    </section>
+</sec:ifNotLoggedIn>
 
-                <div class="form-group">
-                    <input type="checkbox" class="checkbox" name="${securityConfig.rememberMe.parameter}" id="remember_me" checked="checked" class="form-control" required/>
-                    <label for='remember_me'><g:message code='spring.security.ui.login.rememberme'/></label> |
-                    <span class="forgot-link">
-                        <g:link controller='register' action='forgotPassword'><g:message code='spring.security.ui.login.forgotPassword'/></g:link>
-                    </span><br>
-                </div>
-
-                <div class="form-group">
-%{--                    <s2ui:linkButton elementId='register' controller='register' messageCode='Not a member? Sign Up!'/><br>--}%
-%{--                    <s2ui:submitButton elementId='loginButton' messageCode='Log In'>Log In</s2ui:submitButton>--}%
-                    <g:submitButton name="Log In" class="btn btn-primary btn-default"/>
-                </div>
-            </div>
-        </div>
-    </s2ui:form>
-
-    <g:link controller="register" action="registerNewUser" style="margin-left: 10px">Not a member? Register Here!</g:link>
-</section>
+<sec:ifLoggedIn>
+    <script>
+        window.location = "/post/userDashboard"
+    </script>
+</sec:ifLoggedIn>
 </body>
 </html>

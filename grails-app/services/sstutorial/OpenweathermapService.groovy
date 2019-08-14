@@ -1,5 +1,6 @@
 package sstutorial
 
+import grails.gorm.services.Service
 import grails.plugins.rest.client.RestBuilder
 import grails.plugins.rest.client.RestResponse
 import groovy.json.JsonSlurper
@@ -7,6 +8,7 @@ import groovy.transform.CompileStatic
 import org.grails.web.json.JSONObject
 
 @CompileStatic
+@Service
 class OpenweathermapService {
     final String apiKey = "3a531a6be7357a0e324b807900469063"
     final String openWeatherUrl = "http://api.openweathermap.org"

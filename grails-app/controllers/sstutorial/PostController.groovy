@@ -1,7 +1,9 @@
 package sstutorial
 
 import grails.plugin.springsecurity.annotation.Secured
+import grails.web.Controller
 
+@Controller
 class PostController {
 
     /**
@@ -9,7 +11,7 @@ class PostController {
      */
     @Secured(['permitAll'])
     def index() {
-//        render view: '../../views/post/index'
+
     }
 
     /**
@@ -17,7 +19,10 @@ class PostController {
      */
     @Secured(['permitAll'])
     def UserDashboard(){
-//        render view:'userDashboard'
+        // TODO: Fix this bug
+        // TODO: Override Exception page
+        // TODO: Ability to add and show favorite cities
+        // TODO: Add the search city functionality at the navbar
     }
 
     /**

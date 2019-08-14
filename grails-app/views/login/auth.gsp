@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-	<meta name="layout" content="_weatherapp"/>
+	<meta name="layout" content="_weatherappminussignin"/>
 	<title></title>
 	<s2ui:title messageCode='spring.security.ui.login.title'/>
 	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -21,41 +21,40 @@
 </head>
 
 <body>
-<section style="margin-top: 100px">
-	<s2ui:form type="login" focus="username" style="align-content: center">
-		<div class="card">
-			<div class="card-header">
-				Sign In
+
+	<section style="margin-top: 100px">
+		<s2ui:form type="login" focus="username" style="align-content: center">
+			<div class="card">
+				<div class="card-header">
+					Sign In
+				</div>
+				<div class="card-body">
+					<p class="alert-warning">Hmm, that username or password doesn't seem to exist. Big brother is watching!</p>
+					<div class=form-group">
+						<label for="username"><g:message code='spring.security.ui.login.username'/></label><br>
+						<input type="text" name="${securityConfig.apf.usernameParameter}" id="username" class="form-control"/><br>
+					</div>
+
+					<div class="form-group">
+						<label for="password"><g:message code='spring.security.ui.login.password'/></label><br>
+						<input type="password" name="${securityConfig.apf.passwordParameter}" id="password" class='form-control'/><br>
+					</div>
+
+					<div class="form-group">
+						<input type="checkbox" class="checkbox" name="${securityConfig.rememberMe.parameter}" id="remember_me" checked="checked" class="form-control"/>
+						<label for='remember_me'><g:message code='spring.security.ui.login.rememberme'/></label> |
+						<span class="forgot-link">
+							<g:link controller='register' action='forgotPassword'><g:message code='spring.security.ui.login.forgotPassword'/></g:link>
+						</span><br>
+					</div>
+
+					<div class="form-group">
+						<g:submitButton name="Log In" class="btn btn-primary btn-default"/>
+					</div>
+				</div>
 			</div>
-			<div class="card-body">
-				<p class="alert-warning">Hmm, that username or password doesn't seem to exist. Big brother is watching!</p>
-				<div class=form-group">
-					<label for="username"><g:message code='spring.security.ui.login.username'/></label><br>
-					<input type="text" name="${securityConfig.apf.usernameParameter}" id="username" class="form-control"/><br>
-				</div>
-
-				<div class="form-group">
-					<label for="password"><g:message code='spring.security.ui.login.password'/></label><br>
-					<input type="password" name="${securityConfig.apf.passwordParameter}" id="password" class='form-control'/><br>
-				</div>
-
-				<div class="form-group">
-					<input type="checkbox" class="checkbox" name="${securityConfig.rememberMe.parameter}" id="remember_me" checked="checked" class="form-control"/>
-					<label for='remember_me'><g:message code='spring.security.ui.login.rememberme'/></label> |
-					<span class="forgot-link">
-						<g:link controller='register' action='forgotPassword'><g:message code='spring.security.ui.login.forgotPassword'/></g:link>
-					</span><br>
-				</div>
-
-				<div class="form-group">
-					<g:submitButton name="Log In" class="btn btn-primary btn-default"/>
-				</div>
-			</div>
-		</div>
-	</s2ui:form>
-
-	<g:link controller="register" action="registerNewUser" style="margin-left: 10px">Not a member? Register Here!</g:link>
-
-</section>
+		</s2ui:form>
+		<g:link controller="register" action="registerNewUser" style="margin-left: 10px">Not a member? Register Here!</g:link>
+	</section>
 </body>
 </html>
