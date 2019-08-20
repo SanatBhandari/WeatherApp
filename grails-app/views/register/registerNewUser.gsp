@@ -21,9 +21,9 @@
 </head>
 
 <body>
-<section style="margin-top: 100px">
+<section style="margin-top: 100px" class="container">
 	<g:form controller="register" action="stowItInDatabase">
-		<div class="card">
+		<div class="card container">
 			<div class="card-header">
 				Join our community!
 			</div>

@@ -86,6 +86,7 @@ dependencies {
     compile 'org.grails.plugins:spring-security-core:3.2.3'     // CAUTION!!!! USE THIS VERSION ONLY!! ANYTHING ELSE WOULD BE FATAL
     compile 'org.grails.plugins:spring-security-ui:3.1.1'
     compile 'com.auth0:mvc-auth-commons:1.+'
+    compile "org.logback-extensions:logback-ext-loggly:0.1.2"
 }
 
 bootRun {

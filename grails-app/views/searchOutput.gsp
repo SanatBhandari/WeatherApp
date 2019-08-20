@@ -18,7 +18,7 @@
 
 <body>
 
-<section style="margin-top: 100px">
+<section class="container" style="margin-top: 100px">
     <div class="container">
         <div class="card"></div>
         <div class="card text-center w-auto" style="width: 100px; align-content: center">

@@ -2,6 +2,7 @@ import grails.util.BuildSettings
 import grails.util.Environment
 import org.springframework.boot.logging.logback.ColorConverter
 import org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter
+import ch.qos.logback.ext.loggly.LogglyAppender
 
 import java.nio.charset.Charset
 
@@ -22,6 +23,11 @@ appender('STDOUT', ConsoleAppender) {
     }
 }
 
+appender('loggly', LogglyAppender){
+    endpointUrl = "https://logs-01.loggly.com/inputs/9b072ba0-edb9-42fe-8486-a54fbdde626e/tag/logback"
+    pattern = "%d{\"ISO8601\", UTC}  %p %t %c{0}.%M - %m%n"
+}
+
 def targetDir = BuildSettings.TARGET_DIR
 if (Environment.isDevelopmentMode() && targetDir != null) {
     appender("FULL_STACKTRACE", FileAppender) {
@@ -33,4 +39,4 @@ if (Environment.isDevelopmentMode() && targetDir != null) {
     }
     logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
 }
-root(ERROR, ['STDOUT'])
+root(INFO, ['STDOUT', 'loggly'])

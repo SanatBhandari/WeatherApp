@@ -1,13 +1,18 @@
 package sstutorial
 
 import grails.plugin.springsecurity.annotation.Secured
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+
 class RegisterController {
+//    private final Logger logger = LoggerFactory.getClass(this.getClass())
 
     /**
      * Display the sign up form
      */
     @Secured(['permitAll'])
     def form(){
+//        logger.info("The form to register a new controller")
         render view: '../index'
     }
 
