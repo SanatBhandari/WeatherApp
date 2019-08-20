@@ -31,16 +31,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/"><g:message default="About Us" code="message.home"/></a>
+                <a class="nav-link" href="/"><g:message default="Home" code="message.home"/></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><g:message default="About Us" code="message.documentations"/></a>
+                <a class="nav-link" href="#"><g:message default="Documentation" code="message.documentations"/></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><g:message default="About Us" code="message.careers"/></a>
+                <a class="nav-link" href="#"><g:message default="Careers" code="message.careers"/></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><g:message default="About Us" code="message.contact"/></a>
+                <a class="nav-link" href="#"><g:message default="Contact" code="message.contact"/></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><g:message default="About Us" code="message.aboutus"/></a>

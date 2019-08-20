@@ -31,22 +31,28 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/"><g:message default="About Us" code="message.home"/></a>
+                <a class="nav-link" href="/"><g:message default="Home" code="message.home"/></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><g:message default="About Us" code="message.documentations"/></a>
+                <a class="nav-link" href="#"><g:message default="Documentation" code="message.documentations"/></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><g:message default="About Us" code="message.careers"/></a>
+                <a class="nav-link" href="#"><g:message default="Careers" code="message.careers"/></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><g:message default="About Us" code="message.contact"/></a>
+                <a class="nav-link" href="#"><g:message default="Contact" code="message.contact"/></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#"><g:message default="About Us" code="message.aboutus"/></a>
             </li>
         </ul>
+
         <g:form controller="Post" action="index" class="form-inline my-2 my-lg-0 ml-auto py-0">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Language</button>
+            <div class="dropdown-menu" style="margin-left: 79%">
+                <a class="dropdown-item" href="?lang=en">English</a>
+                <a class="dropdown-item" href="?lang=es">Spanish</a>
+            </div>
             <g:actionSubmit value="Sign In" action="index" class="nav-link btn btn-outline-primary my-2 my-sm-0"/>
         </g:form>
     </div>
@@ -55,7 +61,7 @@
 
 <footer class="fixed-bottom navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="main-inner align-content-center" style="align-content: center">
-        <a class="navbar-custom navbar-brand" href="#" style="text-align: center"><g:message default="About Us" code="message.copyright"/></a>
+        <a class="navbar-custom navbar-brand" href="#" style="text-align: center">© <g:message default="Copyright" code="message.copyrights"/></a>
     </div>
 </footer>
 

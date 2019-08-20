@@ -49,17 +49,17 @@
     </div>
 </nav>
 
-<section style="margin-top: 150px">
+<section style="margin-top: 120px">
     <div class="container form-group">
         <g:form controller="ResponseJSON" action="getWeatherByCityAndCountry">
-            <img src="https://i.ibb.co/yB7yp6m/Capture.png" style="margin-left: 250px"/>
+            <img src="https://i.ibb.co/yB7yp6m/Capture.png" style="margin-left: 300px"/>
             <div class="input-group mb-3">
-                <g:field type="text" name="cityName" class="typeahead form-control" style="margin-left: 210px" id="city" aria-describedby="emailHelp" placeholder="Enter the name of the city" required="required" autocomplete="off"/><br>
-                <div class="input-group-append dropdown" style="margin-left: 210px">
+                <g:field type="text" name="cityName" class="typeahead form-control" style="margin-left: 260px" id="city" aria-describedby="emailHelp" placeholder="Enter the name of the city" required="required" autocomplete="off"/><br>
+                <div class="input-group-append dropdown" style="margin-left: 260px">
                     <g:select class="btn btn-outline-secondary dropdown-toggle" name="user.unit" optionValue="${unit}" from="['°C', '°F', 'K']" noSelection="['':'Units']" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"/>
                 </div>
             </div>
-            <g:actionSubmit value="Get the Weather" action="getWeatherByCityAndCountry" class="btn btn-default btn-primary" style="margin-left: 380px"/>
+            <g:actionSubmit code="default.getWeather" value="Get the Weather" action="getWeatherByCityAndCountry" class="btn btn-default btn-primary" style="margin-left: 430px"/>
         </g:form>
     </div>
 </section>

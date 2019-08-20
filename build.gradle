@@ -54,6 +54,28 @@ dependencies {
     runtime "org.apache.tomcat:tomcat-jdbc"
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.15.1"
     runtime 'mysql:mysql-connector-java:5.1.46'
+    String camelVersion = '2.15.3'
+    compile "org.apache.camel:camel-core:${camelVersion}"
+    compile "org.apache.camel:camel-spring:${camelVersion}", {
+        exclude module: 'spring-aop'
+        exclude module: 'spring-beans'
+        exclude module: 'spring-core'
+        exclude module: 'spring-expression'
+        exclude module: 'spring-asm'
+        exclude module: 'spring-tx'
+        exclude module: 'spring-context'
+    }
+    compile "org.apache.camel:camel-groovy:${camelVersion}", {
+        exclude module: 'spring-context'
+        exclude module: 'spring-aop'
+        exclude module: 'spring-tx'
+        exclude module: 'groovy-all'
+    }
+    compile "org.apache.camel:camel-stream:${camelVersion}"
+    testRuntime "org.apache.camel:camel-test:${camelVersion}", {
+        exclude module: "junit"
+    }
+    runtime "org.apache.camel:camel-mail:2.15.3"
     testCompile "org.grails:grails-gorm-testing-support"
     testCompile "org.grails.plugins:geb"
     testCompile "org.grails:grails-web-testing-support"
@@ -63,8 +85,7 @@ dependencies {
     testRuntime "org.seleniumhq.selenium:selenium-chrome-driver:2.47.1"
     compile 'org.grails.plugins:spring-security-core:3.2.3'     // CAUTION!!!! USE THIS VERSION ONLY!! ANYTHING ELSE WOULD BE FATAL
     compile 'org.grails.plugins:spring-security-ui:3.1.1'
-//    compile 'org.springframework.security:spring-security-core:5.1.5.RELEASE'
-
+    compile 'com.auth0:mvc-auth-commons:1.+'
 }
 
 bootRun {

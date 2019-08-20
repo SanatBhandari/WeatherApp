@@ -2,10 +2,11 @@ package sstutorial
 
 import grails.plugin.springsecurity.annotation.Secured
 import grails.web.Controller
+import org.springframework.beans.factory.annotation.Value
+import org.springframework.web.bind.annotation.RequestMapping
 
 @Controller
 class PostController {
-
     /**
      * Render the sign in form
      */
@@ -17,6 +18,7 @@ class PostController {
     /**
      * If successfully authenticated, it will take the user to their dashboard
      */
+    @RequestMapping(value="/")
     @Secured(['permitAll'])
     def UserDashboard(){
         // TODO: Fix this bug

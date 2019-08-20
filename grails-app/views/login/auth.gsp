@@ -21,10 +21,9 @@
 </head>
 
 <body>
-
 	<section style="margin-top: 100px">
 		<s2ui:form type="login" focus="username" style="align-content: center">
-			<div class="card">
+			<div class="card container">
 				<div class="card-header">
 					Sign In
 				</div>
@@ -56,5 +55,12 @@
 		</s2ui:form>
 		<g:link controller="register" action="registerNewUser" style="margin-left: 10px">Not a member? Register Here!</g:link>
 	</section>
+
+<sec:ifLoggedIn>
+	<script>
+		window.location="/post/UserDashboard"
+	</script>
+</sec:ifLoggedIn>
+
 </body>
 </html>

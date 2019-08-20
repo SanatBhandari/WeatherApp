@@ -22,9 +22,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="form">Home <span class="sr-only">(current)</span></a>
-            </li>
+            <sec:ifLoggedIn>
+                <li class="nav-item active">
+                    <a class="nav-link" href="form">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </sec:ifLoggedIn>
+
             <li class="nav-item">
                 <a class="nav-link" href="#">Documentation</a>
             </li>
@@ -39,7 +42,6 @@
             </li>
         </ul>
         <asset:image src="SanatConfluence.jpg" width="42" height="42" style="border-radius: 50%"></asset:image>
-
     </div>
 </nav>
 
@@ -60,52 +62,52 @@
             <tr>
                 <td>London</td>
                 <td>UK</td>
-                <td>29.34 °C</td>
+                <td>29°C</td>
             </tr>
             <tr>
                 <td>Miami</td>
                 <td>US</td>
-                <td>28.29 °C</td>
+                <td>28°C</td>
             </tr>
             <tr>
                 <td>Prague</td>
                 <td>CZ</td>
-                <td>19.23 °C</td>
+                <td>19°C</td>
             </tr>
             <tr>
                 <td>Włocławek</td>
                 <td>PL</td>
-                <td>26.35 °C</td>
+                <td>26°C</td>
             </tr>
             <tr>
                 <td>Tsiémé-Mandiélé</td>
                 <td>CG</td>
-                <td>33 °C</td>
+                <td>33°C</td>
             </tr>
             <tr>
                 <td>Szigetszentmiklos</td>
                 <td>HU</td>
-                <td>23.35 °C</td>
+                <td>23°C</td>
             </tr>
             <tr>
                 <td>Kraslava</td>
                 <td>LV</td>
-                <td>25.05 °C</td>
+                <td>25°C</td>
             </tr>
             <tr>
                 <td>La Portanière</td>
                 <td>FR</td>
-                <td>28.82 °C</td>
+                <td>28°C</td>
             </tr>
             <tr>
                 <td>Nizhniy Kuranakh</td>
                 <td>RU</td>
-                <td>15.45 °C</td>
+                <td>15°C</td>
             </tr>
             <tr>
                 <td>Strasshof an der Nordbahn</td>
                 <td>AT</td>
-                <td>28.07 °C</td>
+                <td>28°C</td>
             </tr>
             </tbody>
         </table>
