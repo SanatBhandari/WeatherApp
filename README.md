@@ -23,15 +23,20 @@ Currently, the code has an intuitive UI to input the location, sign-in (To be im
 The updated code files are contained in the ```grails-app``` directory. As of now, the code fetches the weather information for any ```(City, Country Code)``` combo or ```Zip Code```. I will include the *type-ahead functionality* for prediction of inputs along with setting up the Database for the same.
 
 ## Phase Three
-Added Unit Tests for different model classes in the ```src/test/..``` directory and would add the remaining tests for the classes. Included a basic typeahead script in ```form.gsp``` to model a typeahead (In-Progress)
+Added Unit Tests for different model classes in the ```src/test/..``` directory and would add the remaining tests for the classes. Included a basic typeahead script in ```form.gsp``` to model a typeahead
 
 I'll be using [Auth0](https://auth0.com/ "Click here to go to Auth0 page)), an authentication and authorization platform, to keep a track of different users. *Spring Security Plugin + Auth0* takes care of the login page.
 
 Added Logger Files to the project to bulletproof debugging capabilties down-the-road
 
+## Phase Four
+Added Logging feature to the app using [Loggly](https://www.loggly.com/) and keeping a track of the logs out there. Also, I added *i18n* to the project by implementing the functionality to switch the language of the website to Spanish and English in the dropdown menu on the navbar in the app. 
+
+Added the Spring Security Login to the website with implementing a basic User Dashboard. Also created separate controllers for Registering new users and adding the 'Forgot Password' functionality. 
+
+
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 **PS** The project is still in progress and will be updated as soon as I work on the remaining parts of it. I am using **Test-driven development** along with **Continuous Integration** and other standard Software Development practices on this project. The current repository includes limited functionality in the project and is essentially a **prototype**
 
-```grails-app``` directory consists of the Grails application while the remaining files are the refresher files that I coded prior to jumping in Groovy. I will clean-up the directory structure for clarity once am done with the project
-
-**IN THE PIPELINE:** Spring Security Plugin for logging in users, i18n, Typeahead to predict inputs, additional API integration for reverse geocoding ([MapQuest](https://www.mapquest.com/ "Click Here")), a more comprehensive user dashboard 
+**IN THE PIPELINE:** a more comprehensive user dashboard 
