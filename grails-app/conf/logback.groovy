@@ -23,6 +23,7 @@ appender('STDOUT', ConsoleAppender) {
     }
 }
 
+// This is used for the Loggly Integration
 appender('loggly', LogglyAppender){
     endpointUrl = "https://logs-01.loggly.com/inputs/9b072ba0-edb9-42fe-8486-a54fbdde626e/tag/logback"
     pattern = "%d{\"ISO8601\", UTC}  %p %t %c{0}.%M - %m%n"
@@ -39,4 +40,6 @@ if (Environment.isDevelopmentMode() && targetDir != null) {
     }
     logger("StackTrace", ERROR, ['FULL_STACKTRACE'], false)
 }
+
+// Make sure you change the standard ERROR in root to INFO and adding the loggly parameter to it
 root(INFO, ['STDOUT', 'loggly'])
