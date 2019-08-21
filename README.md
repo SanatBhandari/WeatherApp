@@ -34,7 +34,10 @@ Added Logging feature to the app using [Loggly](https://www.loggly.com/) and kee
 
 Added the Spring Security Login to the website with implementing a basic User Dashboard. Also created separate controllers for Registering new users and adding the 'Forgot Password' functionality. 
 
+## Phase Five
+Deployed Weather+ on Tomcat server by utilizing its Web Archive (WAR) files
 
+Implemented a basic JMS system to send and receive messages 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 **PS** The project is still in progress and will be updated as soon as I work on the remaining parts of it. I am using **Test-driven development** along with **Continuous Integration** and other standard Software Development practices on this project. The current repository includes limited functionality in the project and is essentially a **prototype**
