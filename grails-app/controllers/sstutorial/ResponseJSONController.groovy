@@ -1,9 +1,14 @@
 package sstutorial
 
+import org.springframework.boot.autoconfigure.jms.activemq.ActiveMQConnectionFactoryCustomizer
+
+import javax.jms.*
 import grails.plugin.springsecurity.annotation.Secured
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.RestController
+import javax.jms.Queue
+import org.apache.log4j.Logger
 
 @RestController
 class ResponseJSONController {
@@ -19,6 +24,7 @@ class ResponseJSONController {
     def form(){
         logger.info("Hello Loggly")
         logger.info("Welcome to Weather+")
+
         render(view:"../../views/form")
     }
 
