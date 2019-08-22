@@ -4,6 +4,7 @@ import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration
 import org.apache.activemq.ActiveMQConnection
 import org.apache.activemq.ActiveMQConnectionFactory
+import org.springframework.context.annotation.PropertySource
 
 import javax.jms.Connection
 import javax.jms.ConnectionFactory
@@ -15,6 +16,7 @@ import javax.jms.MessageConsumer
 import javax.jms.Session
 import javax.jms.TextMessage
 
+@PropertySource("classpath:auth0.properties")
 class Application extends GrailsAutoConfiguration {
     private static def url = ActiveMQConnection.DEFAULT_BROKER_URL
     private static def subject = "WEATHERPLUS_QUEUE"

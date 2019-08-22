@@ -85,7 +85,6 @@ dependencies {
     testRuntime "org.seleniumhq.selenium:selenium-chrome-driver:2.47.1"
     compile 'org.grails.plugins:spring-security-core:3.2.3'     // CAUTION!!!! USE THIS VERSION ONLY!! ANYTHING ELSE WOULD BE FATAL
     compile 'org.grails.plugins:spring-security-ui:3.1.1'
-    compile 'com.auth0:mvc-auth-commons:1.+'
     compile "org.logback-extensions:logback-ext-loggly:0.1.2"
     // https://mvnrepository.com/artifact/commons-logging/commons-logging
 //    compile group: 'commons-logging', name: 'commons-logging', version: '99.0-does-not-exist'
@@ -93,6 +92,9 @@ dependencies {
     compile group: 'javax.jms', name: 'jms', version: '1.1'
     // https://mvnrepository.com/artifact/org.apache.activemq/activemq-core
     compile group: 'org.apache.activemq', name: 'activemq-core', version: '5.7.0'
+    // build.gradle
+
+    compile 'com.auth0:mvc-auth-commons:1.+'
 }
 
 bootRun {

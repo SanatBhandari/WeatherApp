@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-	<meta name="layout" content="_weatherappwithoutfooter"/>
+	<meta name="layout" content="_weatherapp"/>
 	<title></title>
 	<s2ui:title messageCode='spring.security.ui.login.title'/>
 	<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -54,7 +54,7 @@
 				</div>
 			</div>
 			<g:form controller="register" action="stowItInDatabase">
-				<g:submitButton name="Register" action="stowItInDatabase" class="btn btn-primary btn-default"/>
+				<g:submitButton name="Register" action="stowItInDatabase" class="btn btn-primary btn-default"/><br>
 			</g:form>
 		</div>
 	</g:form>

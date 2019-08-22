@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="layout" content="_weatherapp">
     <title></title>
     <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
@@ -22,33 +22,6 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Weather+</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Documentation</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Careers</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
-            </li>
-        </ul>
-        <asset:image src="SanatConfluence.jpg" width="42" height="42" style="border-radius: 50%"></asset:image>
-    </div>
-</nav>
-
 <section style="margin-top: 120px">
     <div class="container form-group">
         <g:form controller="ResponseJSON" action="getWeatherByCityAndCountry">
@@ -66,16 +39,11 @@
 
 <g:javascript>
     var citiesFromGSP = [
-        <g:each in="${sstutorial.City.list()}" var="u">
+        <g:each in="${sstutorial.City.list(max: 100)}" var="u">
     '${u.name}, ${u.country}',
 </g:each>
     ]
 </g:javascript>
 
-<footer class="fixed-bottom navbar navbar-expand-sm navbar-dark bg-dark">
-    <div class="main-inner align-content-center" style="align-content: center">
-        <a class="navbar-custom navbar-brand" href="#" style="text-align: center">© Copyright</a>
-    </div>
-</footer>
 </body>
 </html>

@@ -45,24 +45,5 @@
         </div>
     </div>
 </section>
-
-%{--<div class="mh-100" style="background-color: rgba(0,0,255,0.1); align-content: center">--}%
-%{--    <div class="d-inline-block"></div>--}%
-%{--    <div class="d-inline-block" style="width:120px">--}%
-%{--        <g:if test="${attribute}">--}%
-%{--            <h2><b>${attribute['name']}</b></h2><br>--}%
-%{--            <g:if val="°C">--}%
-%{--                <h3>${attribute['main']['temp']} °C</h3><br>--}%
-%{--            </g:if>--}%
-%{--            <g:if val="°F">--}%
-%{--                <h3>${attribute['main']['temp']} °F</h3><br>--}%
-%{--            </g:if>--}%
-%{--            <h3>${(Integer) Math.ceil( (Double) attribute['main']['temp'])} °C</h3><br>--}%
-%{--            <img src="http://openweathermap.org/img/w/${attribute['weather']['icon'].join('')}.png"/><br>--}%
-%{--            <h4>${attribute['weather']['description'].join('')}</h4>--}%
-%{--        </g:if>--}%
-%{--    </div>--}%
-%{--</div>--}%
-
 </body>
 </html>

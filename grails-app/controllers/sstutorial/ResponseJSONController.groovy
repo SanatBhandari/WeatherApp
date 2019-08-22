@@ -15,8 +15,7 @@ class ResponseJSONController {
     def input = params.cityName                 // Parsing the params from the form.gsp to get the input and unit attributes
 
     OpenweathermapService openweathermapService         // Declaring the Openweathermap service to make the API request and parse the obtained JSON
-    final static Logger logger = LoggerFactory.getLogger(ResponseJSONController.class)          // Logger to log the errors and exceptions
-
+    org.slf4j.Logger logger = LoggerFactory.getLogger(ResponseJSONController.class)         // Changes made to the declaration of logger to prevent bugs
 
     /**
      * @return the form.gsp page that handles the input from the user

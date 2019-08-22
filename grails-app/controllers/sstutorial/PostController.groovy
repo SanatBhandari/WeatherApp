@@ -5,6 +5,9 @@ import grails.web.Controller
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.RequestMapping
+import grails.plugin.springsecurity.LoginController
+
+
 
 @Controller
 class PostController {
@@ -21,14 +24,19 @@ class PostController {
     /**
      * If successfully authenticated, it will take the user to their dashboard
      */
-    @RequestMapping(value="/")
     @Secured(['permitAll'])
     def UserDashboard(){
         // TODO: Fix this bug
-        // TODO: Override Exception page
         // TODO: Ability to add and show favorite cities
         // TODO: Add the search city functionality at the navbar
+
     }
+
+    @Secured(['ROLE_USER'])
+    def RoleUserDashboard(){
+
+    }
+
 
     /**
      * Just a personal page to demonstrate different roles
@@ -42,7 +50,7 @@ class PostController {
     /**
      * Displays the home page of the app after logging in
      */
-    @Secured(['permitAll'])
+    @Secured(['ROLE_ADMIN'])
     def form(){
 
     }

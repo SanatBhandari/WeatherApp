@@ -6,6 +6,7 @@ grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'sstutorial.Use
 grails.plugin.springsecurity.authority.className = 'sstutorial.Role'
 grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/post/userDashboard'
 grails.plugin.springsecurity.securityConfigType = "Annotation"
+grails.plugin.springsecurity.logout.postOnly = false
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],

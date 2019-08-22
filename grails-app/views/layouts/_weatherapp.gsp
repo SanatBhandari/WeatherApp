@@ -48,13 +48,46 @@
         </ul>
 
         <g:form controller="Post" action="index" class="form-inline my-2 my-lg-0 ml-auto py-0">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Language</button>
-            <div class="dropdown-menu" style="margin-left: 79%">
-                <a class="dropdown-item" href="?lang=en">English</a>
-                <a class="dropdown-item" href="?lang=es">Spanish</a>
-            </div>
-            <g:actionSubmit value="Sign In" action="index" class="nav-link btn btn-outline-primary my-2 my-sm-0"/>
+            <g:if test="${request.getRequestURL().toString() == "http://localhost:8080/post/userDashboard"}">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Language</button>
+                <div class="dropdown-menu" style="margin-left: 81%">
+                    <a class="dropdown-item" href="?lang=en">English</a>
+                    <a class="dropdown-item" href="?lang=es">Spanish</a>
+                </div>
+            </g:if>
+
+            <g:if test="${request.getRequestURL().toString() == "http://localhost:8080/post/index"}">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Language</button>
+                <div class="dropdown-menu" style="margin-left: 85%">
+                    <a class="dropdown-item" href="?lang=en">English</a>
+                    <a class="dropdown-item" href="?lang=es">Spanish</a>
+                </div>
+            </g:if>
+            <g:else>
+                <div>
+                    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Language</button>
+                    <div class="dropdown-menu" style="margin-left: 940px">
+                        <a class="dropdown-item" href="?lang=en">English</a>
+                        <a class="dropdown-item" href="?lang=es">Spanish</a>
+                    </div>
+                </div>
+            </g:else>
+
+            <div style="width: 10px;"></div>
+
+            <g:if test="${request.getRequestURL().toString() == "http://localhost:8080/" || request.getRequestURL().toString() == "http://localhost:8080/logout/index" }">
+                <div>
+                    <g:actionSubmit value="Sign In" action="index" class="nav-link btn btn-outline-primary my-2 my-sm-0"/>
+                </div>
+            </g:if>
+
+            <g:if test="${request.getRequestURL().toString() == "http://localhost:8080/post/form"}">
+                <div>
+                    <asset:image src="SanatConfluence.jpg" width="42" height="42" style="border-radius: 50%"/>
+                </div>
+            </g:if>
         </g:form>
+
     </div>
 </nav>
 <g:layoutBody/>

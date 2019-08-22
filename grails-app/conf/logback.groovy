@@ -42,4 +42,4 @@ if (Environment.isDevelopmentMode() && targetDir != null) {
 }
 
 // Make sure you change the standard ERROR in root to INFO and adding the loggly parameter to it
-root(INFO, ['STDOUT', 'loggly'])
+root(ERROR, ['STDOUT', 'loggly'])
